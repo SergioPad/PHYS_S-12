@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PHYS S-12: Intro to Digital Fabrication </title>
+  <title>PHYS_S-12: Introduction to Digital Fabrication</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
-  <link href="../style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #000000;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container-fluid">
-  <h3>Week 1: Introduction </h3> <br> 
-  <div class="row">
-    
-      <div class="col-md-4">
-        <p> Here is an image: </p>
-
-        <img src="./sew.png" class="img-responsive margin" style="width:100%" alt="Sew">
-
-        <p> And here is a <a href='../index.html'>link</a>. </p>
-      </div >
-     
-      <div class="col-md-4">
-        <p> Here is a video embedded with the iframe tag: </p> 
-   
-        <iframe style="width:100%; height:300px" src="https://www.youtube.com/embed/z-6idke_hVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-
-      <div class="col-md-4">
-        <p> Here is a column with an mp4 video. </p> 
-   
-        <video controls>
-          <source width="320" height="240" src="demo.mp4" type="video/mp4">
-        </video>
-      </div>
-
-
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="./index.html">HOME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://sergiopad.github.io/PHYS_S-12/About%20Me/index.html">ABOUT ME</a></li>
+        <li><a href="https://sergiopad.github.io/PHYS_S-12/About%20Me/Final%20Project/index.html">FINAL PROJECT</a></li>
+        <li><a href="https://nathanmelenbrink.github.io/intro-dig-fab/index.html">COURSE WEBSITE</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
 
- 
-  
-  
+<div class="container-fluid2 bg-9 text-center">
+  <p><H3><b>FINAL PROJECT</b></H3></p>
+</div>
+
+<div class="container-fluid bg-7 text-center">
+  <p>An idea that I have for a final project is making a rain/umbrella vehicle. It would consist of a sensor that would tell the vehicle that it is raining. The vehicle would have an umbrella attached so that when it's raining, it would open the umbrella. Using another sensor, it would find a person that is in the rain and would accompany them until they get to their destination. </p>
 </div>
 
 </body>
