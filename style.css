@@ -23,7 +23,7 @@ body {
     color: #ffffff;
   }
   .bg-5 { 
-    background-color: #bebebe; /* Light Gray */
+    background-color: #8f8f8f; /* Light Gray */
     color: #ffffff;
   }
   .bg-6 { 
@@ -31,8 +31,8 @@ body {
     color: #555555;
   }
   .bg-7 { 
-    background-color: #f8f8f8; /* White Gray */
-    color: #555555;
+    background-color: #33fffc; /* Light Blue */
+    color: #000000;
   }
    .bg-8 { 
     background-color: #ffffff; /* White */
