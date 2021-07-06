@@ -8,6 +8,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/arduino-light.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/arduino.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -43,10 +47,201 @@
   <h4 style="color: black;"><b>WEEK 04: RAPID PROTOTYPING</b></h4>
 </div>
 
+<div class="container-fluid2 bg-7 text-center">
+  <p style="color: black;"><b>Assignment: Make and document a kinetic sculpture, include circuitry, control it with a breadboard, measure voltage, find current using Ohm's Law, and use the Microcontroller Analog.</b></p>
+</div>
+
+
 <div class="container-fluid2 bg-8">
   <!--<h3>Week 1: Introduction </h3> <br>--> 
   <div class="row">
-    
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>For this assignment I decided to create a dolphin that will infinitely swim. I got this idea from one of the toys that my brother has in which the dolphin will start to swm if you move the wheels. I thought this was going to be somewhat simple but it turned out to be more complicated than I thought. For this assignment, I used the materials listed in the photo below which are a compass, scissors, a utility knife, tape, wooden sticks, a ruler, and a pencil. This was the first time that I created a kinetic sculpture and it turned out to be pretty fun. Throughout the process, I also learned how to use a motor and connect it to the Metro board as well as using a potentiometer to turn the motor. </p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="Materials.jpg" class="img-responsive img-rounded" alt="Picture of the materials used to create the dolphin kinetic sculpture.">
+    </div>
+    <div class="col-md-5">
+      <img src="KineticSculpture.gif" class="img-rounded2" style="width:100%" alt="Front LED View">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>To start this sculpture, I decided to learn how to make gears which became more complicated than it looked. I went surfing on the Internet, looking at some videos, and grabbing different materials which were cardboard, opaline paper, and normal paper. The first gear that I did was made from cardboard and I drew it freehandedly. It kind of work and it was a great first gear but there was still a long way to go. Using my printer, I decided to print a model of a gear that I found on the internet and later trace it onto the opaline paper. Then, using the scissors I cut the gear and thought that I was finished. With the help of the compass, I made a hole in the center in order for the motor to fit, but I first had to pass a wooden stick through the hole in order to make it the right size. I then proceeded to test it with the motor and the gear turned. Just to be sure, I also made a carboard gear from the template that I printed and repeated the same steps. I now had two functioning gears! </p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <img src="Set of gears.jpg" class="img-responsive img-rounded" alt="Picture of the four gears that I used for the sculpture.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>After having two gears, I decided to make a mechanism that would rotate the dolphin so that it appeared to be swimming. I used a wooden stick and a compass to make a whole in both gears away from the center and attached a wooden stick to it. I then cut little squares from cardboard that I attached to the wooden stick. This would function as a space so that later, I could create the little cardboard rectangle that would hold the dolphin. I used some glue that I found in order to stick the three pieces. After doing this, I turned on the motor again to see if it would work but the gears would turn and instead, the motor would, twisting all the wires. I didn't know what to do until I checked Sam's documentation and saw tha she used a little 3d printed part that fits the motor. I found it on my kit and made a huge hole in the center of both gears and stuck that 3d printed part. By this time, I saw that the opaline gear couldn't hold so much weight so instead I decided to stick with the cardboard replica of it. After trying again, the mechanism worked and I was ready to move on to the circuitry part.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="Top view of sculpture.jpg" class="img-responsive img-rounded" alt="Picture of the top view of the sculpture which allows to see the motor and gear.">
+    </div>
+    <div class="col-md-5">
+      <img src="Angled view of sculpture.jpg" class="img-responsive img-rounded" alt="Picture of the top view of the sculpture which allows to see the motor and gear.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>For the circuitry part of the assignment, I decided to use a potentiometer that would indicate the speed at which the motor had to turn. For this, I connected the potentiometer to the breadboard and to three analog ports. This time, I used 5 volts instead of 3.3 due to the use of a motor. I then connected the digital pin number 3 to the L9110 H Bridge Power Driver and that to the motor. I now had all the setup ready and just needed to code it. I went to look at the course's webpage and found a code that did exactly what I wanted. I had already tried this in class and it worked perfectly fine, so I used it. I plugged the Metro into my computer, uploaded the code, and tried it. The gear started to turn slowly and as I turned the potentiometer, it started to turn faster. However, I made a slight adjustment in which I would print the speed of the potentiometer to the Serial Monitor in Arduino IDE in order to notice how fast the motor was spining. Success!</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="Circuitry used1.jpg" class="img-responsive img-rounded" alt="Image of the wires, potentiometer, breadboard, and motor used in sculpture.">
+    </div>
+    <div class="col-md-5">
+      <img src="Circuitry used2.jpg" class="img-responsive img-rounded" alt="Second image of the wires, potentiometer, breadboard, and motor used in sculpture.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/Mi9ni2oBGto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-5">
+      <pre><code class="language-arduino">
+void setup() {
+  pinMode(3, OUTPUT);
+  pinMode(A0, OUTPUT);  //This will be GND for the potentiometer
+  pinMode(A4, OUTPUT);  //This will be 3.3V for the pot
+
+  digitalWrite(A0, LOW);
+  digitalWrite(A4, HIGH);
+}
+
+void loop() {
+  int pot_value = analogRead(A2);   //pot wiper is on A2
+  Serial.println(pot_value);
+  int motor_speed = map(pot_value, 0, 1023, 255, 0); // map motor_level to pot_value so that zero corresponds to lowest speed
+  analogWrite(3, motor_speed);
+  delay(1);
+}
+</code></pre>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>Lastly, I used opaline paper to create the dolphin by tracing an outline and cutting it out. I decided to add some color and made the dolphin blue. However, I thought that it would look pretty boring for the dolphin to be swimming in the air so I used some of the opaline paper that I had left and created some waves. I colored the top part of the waves light blue and the rest a little darker to look like the top and bottom of the ocean. After doing, this, I needed a place to mount the gear and the motor so I made a little cardboard box with tape in order to hold each piece in place. However, I quickly ran into a problem which was fitting the motor since the wires had no place to connect to the L9110 H Bridge Power Driver so using the utility knife, I cut out a little hole in the back carboard piece and it was just the right size for the motor to pass through it. I now had everything ready so I turned on the motor using the potentiometer but something wasn't quite right.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="Dolphin and waves.jpg" class="img-responsive img-rounded" alt="Image of the cutout dolphin and waves used in sculpture.">
+    </div>
+    <div class="col-md-5">
+      <img src="Box View2.jpg" class="img-responsive img-rounded" alt="Picture of the carboard box made for the sculpture.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>When I turned the motor, the little cardboard stick that was were the dolphin goes started to tilt until it touched the floor. I decided to use some of the black spare wire that I had and made a little hole for the cardboard stick to go through. When I turned the motor back on, the stick ran smoothly and I was almost done with the assignment. I used the multimeter to measure the voltage of the potentiometer and the digital pin 3 which was connected to the L9110 H Bridge Power Driver. I got some pretty reasonable measurements. I then proceeded to use Ohm's Law to find the current through the potentiometer. I turned the potentiometer until it was about halfway in its path and measured the voltage. The voltage was 3.26 volts but the resistance was more difficult to find. After searching in the Internet, I found that the potentiometer has somewhere the resistance that it has. I found that it was 10k Ohm's. Knowing this, I used Ohm's Law and found that the current was 0.000326 amps. After doing this calculation, the only thing that was left to do was tape the waves and the dolphin and there it was, my first kinetic sculpture!</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="Box View1.jpg" class="img-responsive img-rounded" alt="Image of the box after attaching the wire to secure the cardboard stick. Motor also appears.">
+    </div>
+    <div class="col-md-5">
+      <img src="Multimeter1.JPG" class="img-responsive img-rounded" alt="Picture of the first multimeter reading.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="Multimeter2.JPG" class="img-responsive img-rounded" alt="Picture of the second multimeter reading.">
+    </div>
+    <div class="col-md-5">
+      <img src="Ohm's Law.jpg" class="img-responsive img-rounded" alt="Picture of Ohm's Law used to find the current through the potentiometer.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <img src="KineticSculpture.gif" class="img-rounded2" style="width:100%" alt="Front LED View">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
       <!--<div class="col-md-4">
         <p> Here is an image: </p>
 
