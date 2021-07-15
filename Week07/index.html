@@ -43,9 +43,151 @@
   <h4 style="color: black;"><b>WEEK 07: ELECTRONIC INPUT DEVICES</b></h4>
 </div>
 
+<div class="container-fluid2 bg-7 text-center">
+  <p style="color: black;"><b>Assignment: Use a sensor from your kit to measure a physical quantity with your microcontroller, calibrate it, find it's range, and repeat it with a fabricated sensor made by yourself.</b></p>
+</div>
+
 <div class="container-fluid2 bg-8">
   <!--<h3>Week 1: Introduction </h3> <br>--> 
   <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>For this first part of the assignment, I decided to use a phototransistor and two LED's. I first learned that the phototransistor basically operates depending on how much light it gets. The basic idea for it was to shine a lamp into the phototransistor and the LED's would get brighter or dimmer depending on how much light it got. First, I modeled the whole circuit in Tinkercad and found that the name of the phototransistor in Tinkercad is Ambient Light Sensor. I also simulated both LED's of different colors, one would be green and other one would be blue. So after I had everything modelled, I decided to create it in real life, but there was one problem, I didn't know which leg was supposed to connect to ground and which to power. To solve this, I decided to go to a lab session where Victoria helped me figure out the correct position of the phototransistor. I also decided to separate the phototransistor from the LED's so that the light that they gave off wouldn't affect the phototransistor measurement. After figuring this out, I had completed the circuit and it was time to program it using Arduino IDE. </p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="PhototransistorTinkercad.png" class="img-responsive img-rounded" alt="Picture of the phototransistor circuit in Tinkercad with two LED's.">
+    </div>
+    <div class="col-md-5">
+      <img src="Phototransistor1.jpg" class="img-responsive img-rounded" alt="Picture of the phototransistor circuit made in real life with both LED's.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>In order to get an accurate measure of the phototransistor, I connected it to analog pin A1 since it would read a value from 0 - 1023. In Arduino IDE, the code that I created was very simple. It would basically read pin A1 which corresponded to the phototransistor, print that value, and then change the LED's value. For each LED, I hooked one to pin A3 and the other one to A4 so that you could notice if the LED got brighter or dimmer. I also decided to play around with the LED's and settled with making one of them the value of the phototransistor and the other one 1023 - phototransistor since 1023 would correspond to 3.3 volts. This would make the LED's brightness go in opposite ways. Now that the code was completed, I just had to try it so I uploaded the code to my Metro M0 board and tested it.  </p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="PhototransistorPins.jpg" class="img-responsive img-rounded" alt="Picture of the phototransistor circuit in real life where it shows each connection to the Metro.">
+    </div>
+    <div class="col-md-5">
+      <iframe src=https://create.arduino.cc/editor/sergiopad/5efacdfa-ef41-46be-b55b-9526cd8f45eb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>After several minutes of testing, I realized that at very long distances, the photoresistor doesn't quite sense a change in the light that it's receiving but the closer you get, the higher the number that is printed to the Serial Monitor. I then decided to grab some data. Using a measuring tape and my flashlight, I measure the distance from the phototransistor to the flashlight as well as the number that was printed to the Serial Monitor. During this process, I would also be guided by the brightness of the LED's in order to see if my results looked realistic. I did 10 different distances but at about 10 centimeters, the number started to increase at a very fast rate so I took more measurements before and after. The distances from which I took measurements were 0.45 m, 0.4 m, 0.35 m, 0.31 m, 0.22 m, 0.15 m, 0.13 m, 0.10 m, 0.07 m, and 0.05 m. After getting all those values, I created a graph and surprisingly, it looked like a cubic function. As the distance decreased, the intensity started to increase at a non-linear rate. Since it was very complicated to get accurate intensities at long distances, there is only a slight curve at bigger distances in the graph. Then, I proceeded to find the lowest and highest values that were printed on the monitor. I found that the lowest intensity values ranged from 29 to 31 and the highest ones from 1004 - 1007. This sounded correct since it would only get to 0 if it was in total darkness which in this case it wasn't and it wouldn't reach 1023 since there was a resistor before it which made the current be shared between both of them.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/kJgNQeBN9KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-5">
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/J6u2PxKcF9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="PhototransistorTable.jpg" class="img-responsive img-rounded" alt="Picture of the table with distance and light intensity values for the phototransistor circuit.">
+    </div>
+    <div class="col-md-5">
+      <img src="PhototransistorGraph.jpg" class="img-responsive img-rounded" alt="Picture of the graph of distance vs light intensity for the phototransistor circuit.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <br><div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <img src="PhototransistorCircuit.jpg" class="img-responsive img-rounded" alt="Picture of the finished phototransistor circuit.">
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>For the second part of this assignment, I decided to create a water level sensor. It basically would tell you how much water is in your cup. For this, I used four pieces of copper. One was always connected to the ground and the other three acted as capacitive sensing. First, I had to cut the three four pieces of copper using scissors and using tape, I taped the wires to the copper. After this was done, I moved on to creating the circuit in real life. I used Robert's example as my base but I did some modifications. The first one was that since I had three copper pieces that would serve to measure the water level, I had to create three capacitive sensing. Also, I included a copper piece that would go to ground, which would allow me to not touch the other three copper pieces in order to get a measurement. After these modification were made, it was time to code this circuit.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="WaterLevelReal1.jpg" class="img-responsive img-rounded" alt="Picture of the water level circuit made in real life.">
+    </div>
+    <div class="col-md-5">
+      <img src="WaterLevelReal2.jpg" class="img-responsive img-rounded" alt="Picture of the water level circuit made in real life.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>In Arduino IDE, the code was very simple. I again used Robert's capacitive sensing code as my base but I made a few modifications. I added two more sensor values, two more capacitive sensors, and made a set of conditions in order to print certain things to the serial monitor. The code was quite easy and fast so I hooked up the Metro M0 to the computer and uploaded the code. I started to test it and had to play around with the sensor values so that it would be accurate to the water being poured. The serial monitor basically printed the amount of water in the cup which would either be very little, at 50% or full of water. I had a lot of trouble making the copper pieces sense the water between them because the numbers would start to change very quickly. However, in the end, everything turned out okay and I learned to create my own water sensor!</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/5mkED6JeqPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-5">
+      <iframe src=https://create.arduino.cc/editor/sergiopad/f4c08053-4ad4-455d-b8a1-d7466f26b174/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div><br>
+
+
     
       <!--<div class="col-md-4">
         <p> Here is an image: </p>
