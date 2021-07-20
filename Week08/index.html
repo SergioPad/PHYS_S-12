@@ -43,10 +43,110 @@
   <h4 style="color: black;"><b>WEEK 08: ELECTRONICS OUTPUT DEVICES</b></h4>
 </div>
 
+<div class="container-fluid2 bg-7 text-center">
+  <p style="color: black;"><b>Assignment: Use a new output device, avoid the delay() function, and write a program that uses at least one input and output device.</b></p>
+</div>
+
 <div class="container-fluid2 bg-8">
   <!--<h3>Week 1: Introduction </h3> <br>--> 
   <div class="row">
-    
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <p>For this assignment I created a musical keyboard with some buttons, an LED strip, and a piezo buzzer. Since I hadn't played with the LED strip and since previous assignments wanted to play around with the piezo buzzer, I thought this was the perfect opportunity. The idea behind this was to basically have a certain number of buttons, each with a different tone, and when one of them was pressed, the LED strip will turn on with each LED turning on a different color. However, I remembered that I only have nine buttons so decided to settle on creating seven musical tones which are C4, D4, E4, F4, G4, A4, and B4. At the same time, the piezo buzzer would create that tone so that you could hear it. Since in this assignment we couldn't use the delay() function, I had to structure the code in a different way by using classes and functions that would later on be called in the setup() and loop() functions. There were some challenges and difficulties that appeared during the process but in the end, the keyboard works and plays the tone it has to. The first step in this process was to model the actual circuit in Tinkercad and then create it in real life.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="MusicalKeyboard.jpg" class="img-responsive img-rounded" alt="Picture of the musical keyboard circuit completed in real life.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <br><img src="TinkercadMusicalKeyboard.png" class="img-responsive img-rounded" alt="Picture of the musical keyboard circuit created in Tinkercad to see how it looks.">
+    </div>
+    <div class="col-md-5">
+      <p>The first step in the process was modelling the keyboard in Tinkercad. After creating a new circuit, I needed seven buttons, a piezo buzzer, a resistor, and a 10 LED strip. Instead of using the breadboard that comes with all the circuits, I decided to use a bigger one due to the size of the piezo buzzer and all the buttons that I was going to use. After looking for the LED strip for a while, I found that I had to first click on the "ALL" page so that every input and output device appeared. I decided to use 5 volts for this circuit since the red wire on the LED strip says +5V. This time, I would use all the buttons as pull up resistors so I only needed one resistor for the LED strip. After wiring all the buttons which basically consisted of one wire connecting them to ground and the other one to their respective digital pin, I wired the piezo buzzer which was basically a wire that connected it to ground and the other one to pin 13 on the Metro. Finally, I wired the LED strip. After looking at the <a href="https://nathanmelenbrink.github.io/intro-dig-fab/08_output/led-buzzers">LED buzzers page</a>, I found out that the yellow wire had to pass through a resistor and then connect it to the Metro. I decided to use a 100 ohm resistor which is the one that I would normally use for a simple LED. I also wired the 5 volts wire to power and the ground one to ground. After wiring all of this in Tinkercad, I was ready to replicate it in real life and code it.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>The second part was to create the Tinkercad circuit in real life, but I had to make some modifications along the way. After wiring the voltage and the ground to the breadboard, I wired the seven buttons which fitted perfectly on the breadboard. The number of digital pins wasn't a problem at all so I then proceeded to the LED strip part. Since there was no way of securing the LED strip to the breadboard, I just wired the three wires that it had to the breadboard and just left the actual strip on the table. Finally, I had to wire the piezo buzzer. However, at this point I realized that I had no space left on the breadboard. I then started to look at some of the examples that Nathan had showed us and found that <a href="https://kassialove.github.io/PS70-assignments/week8.html"> Kassia's</a> way of wiring the piezo would also function in my case. After figuring out how to wire everything to the breadboard and connect it to the Metro, I was ready to start coding in Arduino IDE.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="BreadboardWiring.jpg" class="img-responsive img-rounded" alt="Picture of the wiring in the breaboard with all the buttons, piezo buzzer, and LED strip.">
+    </div>
+    <div class="col-md-5">
+      <img src="WiringMusicalKeyboard.jpg" class="img-responsive img-rounded" alt="Picture of the wiring of the muscial keybaord completed in real life with all the buttons, piezo buzzer, and LED strip.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <p>The last step was to code the Metro to make a certain tone when a certain button was pressed as well as lighting up the LED strip without using the delay() function. I opened Arduino IDE and created a new file while at the same time I opened the <a href="https://learn.adafruit.com/multi-tasking-the-arduino-part-1/all-together-now">Adafruit page</a> about multi-tasking the Arduino. I mostly looked at the classes page since I would be using classes for this assignment. I started by coding one button creating a tone to the piezo buzzer. Since I didn't use a resistor for the buttons, I declared them as INPUT_PULLUP. I created a class for the piezo buzzer and tested it, but it wouldn't operate the way that I wanted it to. However, I started to realize that it was better to create a separate function with a frequency argument which would only take one line of code, and then use it every time the button was pressed. I settled on that and created a myTone() function. I then went to declare two variables which were previousMillis which was 0 and offTime which was 1000. Since I couldn't use the delay() function, I would subtract previousMillis from millis() until it was greater than or equal to offTime. Basically, it would check for a button press every second instead of pausing everything for one second. If the condition was true, millis() would become previousMillis and it would start to check for a button press. Since the buttons were connected to a digital pin, it would look if the button was LOW meaning that it had been pressed. If it was, it would call the myTone() function and create the tone, which for the first button would be C4 with a frequency of 261.63 hertz. After doing all of this, I tested it and it worked. Then, I just replicated this seven more times, each with a different frequency according to the musical notes which are C4, D4, E4, F4, G4, A4, and B4. After doing all of this and testing each button, the piezo buzzer and button code was done. Now, I only had to code the LED strip.</p>
+    </div>
+    <div class="col-md-5">
+      <br><iframe src=https://create.arduino.cc/editor/sergiopad/2d2cd754-1feb-4534-9240-b50c98cda252/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <br><br><img src="MusicalNotesFrequencies.png" class="img-responsive img-rounded" alt="Picture of the frequencies that each muscial note has found on the Internet.">
+    </div>
+    <div class="col-md-5">
+      <p>In order to get the frequency for each of the notes, I looked up on the Internet a table with all the notes and their respective frequencies. I found a <a href="https://www.youtube.com/watch?v=-c0snjrDtd8">YouTube video</a> with the frequencies of each note with two decimal places. I also found on the Internet a table with the frequencies rounded to the nearest whole number. With a combination of both of them, I assigned each frequency to each button press. Now, I only had to code the LED strip which would be by using classes. I created the class called LEDStrip that would contain a blue, red, and green variable which would correspond to the RGB values. I also created a general variable called strip with the number of LED's, and the digital pin which was 12. Then, I decided that the Update() function of this class would basically consist of creating the LED colors since it would be very repetitive to write this over and over again for each button press. I used a for() loop which would run 10 times, one for every LED. Every time, it would turn on an LED with a certain combination of RGB values. For this, I played around with how bright or dim each RGb value would be. After this was done, I just added to the setup() function the brightness of the strip and to begin. I created seven tone functions that would update depending on which button was pressed. However, at the end, the LED strip would show all of those colors and then it would turn off until another button was pressed. However, I had some trouble in this part since I had created the strip variable in the class but I kept getting an error that said that I couldn't use the clear() function outside of that class. I tried making the strip() variable public but it didn't work either. I then thought of using the clear() function in the Update() function but after trying for the first time, the LED's would remain turned on until another button was pressed. After consulting the Internet, I found that I had to make it a general variable so I took it out of the class and everything now worked. After I tested the LED strip code with one button, I just did it for the other six and all seven buttons worked. I uploaded the code and tried the final product.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>After doing some overall testing, I found that sometimes, the piezo buzzer wouldn't play the sound but the LED strip would still light up. I thought that it had something to do with the legs of the piezo buzzer and sure it was because when I held the piezo buzzer in the air, I could hear every note play but when I left it on the table, the sound wouldn't come out or it would come out very distorted. I tried to look for any loose wire but everything was connected so I just figure out that it had to do something with the legs of the buzzer since one of them moved around a lot in it's place. After resolving this issue, I made some more tests and this were the outcomes:</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/ekIkErsFHBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-5">
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/PrSHn_7-un0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
       <!--<div class="col-md-4">
         <p> Here is an image: </p>
 
