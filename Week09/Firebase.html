@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <style>h1 {text-align: center;}</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose your note</title>
+</head>
+
+<body>
+
+  <h1>Insert frequency for note:</h1>
+  <div style="text-align:center;">
+    <input type="number" id="frequency_of_note" style="height:50px; width:200px">
+  </div>
+  <br><div style="text-align:center;">
+    <button onclick="setFrequency()">Click to Set Frequency</button>
+  </div>
+  <br><div style="text-align:center;">
+    <button onclick="turnOff()">Click to Stop Tone</button>
+  </div>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDL4LFvCyNdJdKvkUHcooRXD1jSVm3phKA",
+    authDomain: "esp32-led-22134.firebaseapp.com",
+    databaseURL: "https://esp32-led-22134-default-rtdb.firebaseio.com",
+    projectId: "esp32-led-22134",
+    storageBucket: "esp32-led-22134.appspot.com",
+    messagingSenderId: "324716414314",
+    appId: "1:324716414314:web:d1644ff1c8a783f6e3d113",
+    measurementId: "G-TH9RFMHBJV"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // Get a database reference to our blog
+  var ref = firebase.database().ref("/");
+
+  // make the buttons call the function below 
+
+  function setFrequency(){
+    var NoteFrequency = document.getElementById("frequency_of_note").value;
+    console.log("setting frequency");
+    alert("Your frequency has been set.");
+    ref.update({
+      "NOTE_FREQUENCY": NoteFrequency
+    });
+  }
+
+  function turnOff(){
+    console.log("stopping note");
+    alert("Your note has stopped.");
+    ref.update({
+      "NOTE_FREQUENCY": "0"
+    });
+  }
+
+    </script>
+
+</body>
