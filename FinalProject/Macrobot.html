@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <style>h1 {text-align: center;}</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Macrobots</title>
+</head>
+
+<body>
+
+  <h1>Choose to join or separate macrobots</h1>
+  <br><div style="text-align:center;">
+    <button style="width: 125px; font-size: 16px; background-color: #008CBA; border: 2px solid #008CBA;" onclick="joinMacrobots()">Join</button>
+    <button style="width: 125px; font-size: 16px; background-color: #f44336; border: 2px solid #f44336" onclick="separateMacrobots()">Separate</button>
+  </div>
+  <br><h3 id = "QRcode" style="text-align: center;">QR Code:</h3>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDX6OEAB_pIa9K49eRQEOu2icO2YOrRTtQ",
+    authDomain: "macrobots-4287b.firebaseapp.com",
+    databaseURL: "https://macrobots-4287b-default-rtdb.firebaseio.com",
+    projectId: "macrobots-4287b",
+    storageBucket: "macrobots-4287b.appspot.com",
+    messagingSenderId: "576746164771",
+    appId: "1:576746164771:web:b7dfa8568534c9f9ce1796",
+    measurementId: "G-QQ48V2E187"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var ref = firebase.database().ref("/");
+  var QRcode = firebase.database().ref("/");
+
+  // make the buttons call the function below 
+
+  function joinMacrobots(){
+    console.log("joining Macrobots");
+    alert("Macrobots will start to join");
+    ref.update({
+      "COMMAND": "Join"
+    });
+  }
+
+  function separateMacrobots(){
+    console.log("separating Macrobots");
+    alert("Macrobots will start to separate");
+    ref.update({
+      "COMMAND": "Separate"
+    });
+  }
+    
+  QRcode.on('value', (snapshot) => {
+    const data = snapshot.val();
+    console.log(data);
+    document.getElementById("QRcode").innerHTML = data["QRCode"];
+  });
+
+    </script>
+
+</body>

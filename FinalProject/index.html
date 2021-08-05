@@ -39,16 +39,465 @@
   </div>
 </nav>
 
-<div class="container-fluid2 bg-9 text-center">
-  <br><h2 style="color: white;" class="margin">FINAL PROJECT</h2>
+<div class="container-fluid2 bg-7 text-center">
+  <p><b><h3>FINAL PROJECT:</h3></b></p>
+  <p><b><h3>Macrobots</h3></b></p>
 </div>
 
-<div class="container-fluid bg-7">
+<div class="container-fluid2 bg-8 text-center">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>The idea of creating robots that on command would join or separate from each other comes from the Big Hero 6. And if you haven't seen that movie, I am talking about making something similar to the microbots presented by the main character. I've watched that movie several times by now and I am always amazed by the technology that is presented such as personal healthcare companions, robots with the capicity to build structures, plasma blades, and many more. Before starting this course, I looked at several YouTube videos such as this <a href="https://www.youtube.com/watch?v=IcDf4ovXGho">one</a>, I was kind of convinced that this idea could be made real. With the help of Dr. Melenbrink, we figured out a realistic way of creating them with parts of the kit. Basically, there would be one robot that would spin in circles until it found it's partner so that they would join each other. Then, they would separate. Well, I am proud to present to you, after 7 weeks of learning about Digital Fabrication, functioning Macrobots!</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/aO3-3eSlFl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid2 bg-7 text-center">
+  <p><h4 style="color: black;">Parts Needed:</h4></p>
+</div>
+
+<div class="container-fluid2 bg-8">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p style="text-align: left;">In order to create both Macrobots, parts from the <a href="https://nathanmelenbrink.github.io/intro-dig-fab/kit.html">kit</a> such as wires, motors, boards, and many more were needed but at the same time 3D printed parts and objects that I found in my house. Below is a list of the parts that were used in this project:</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+</div>
+
+<div class="container-fluid2 bg-8">
   <div class="row">
     <div class="col-md-1">
     </div>
     <div class="col-md-5">
-      <h4 style="color: black;"><b>Brainstorm ideas:</b></h4>
+      <p><b><h4 style="color: black; text-align: left;">Parts From The Kit:</h4></b></p>
+      <p style="text-align: left;">>> 1x ESP32 Huzzah<br>
+             >> 1x L9110 H-bridge driver<br>
+             >> 2x N20 Gearmotors<br>
+             >> 1x ESP32-CAM<br>
+             >> 1x FTDI programmer<br>
+             >> 13x Pin-socket wires<br>
+             >> 1x Screwdriver<br>
+             >> 5x Cable ties<br>
+             >> 4x LEGO wheels and hubs<br>
+             >> 1x Hookup wires<br>
+             >> 1x Multi-meter<br>
+             >> 1x Caliper</p>
+    </div>
+    <div class="col-md-5">
+      <p><b><h4 style="color: black; text-align: left;">Parts Not From The Kit:</h4></b></p>
+      <p style="text-align: left;">>> 1x LIPO 1000 mAh battery<br>
+             >> 2x LEGO wheels and hubs<br>
+             >> 8x LEGO pieces<br>
+             >> 1x Cardboard<br>
+             >> 2x 3D printed Macrobot<br>
+             >> 1x Printed QR Code<br>
+             >> 1x Masking tape<br>
+             >> 1x Double-sided tape<br>
+             >> 1x Scissors<br>
+             >> 1x Super glue<br>
+             >> 1x Electrical Tape</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+</div>
+
+<br><div class="container-fluid2 bg-7 text-center">
+  <p><h4 style="color: black;">Fusion360 Design:</h4></p>
+</div>
+
+<div class="container-fluid2 bg-8">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <p style="text-align: left;">In order to start my sketch in Fusion360, I had to think about how the Macrobot would look and a way to fit all the circuit inside of it. The first idea that came to my mind was cutting the Macrobot in half in order to have access to the interior. However, I now had to think about a joining mechanism. Quickly enough, I came up with the idea of creating two empty cylinders on one half and an extruded filled cylinder that would reach the other side and join both sides. Since I didn't know how to create a sphere that was hollow, I looked on YouTube some tutorials and found <a href="https://www.youtube.com/watch?v=3vXe_t9Ggag&t=49s">Kwerkshop's</a> tutorial on making domes. After creating the joining mechanism and two half spheres, I had to make the little "ears" that they have. In order to know exactly how they looked, I relied on this <a href="https://www.pinterest.com.mx/pin/807059195703633867/">image</a> which I printed and using my calipers, approximated the diameter of each of the spheres as well as the length of the octagon that joins both ends. After thinking that I was done, I realized that the "ears" looked small compared to the center sphere so I learned to use the scale tool with <a href="https://www.youtube.com/watch?v=1707iQs1RXg">Tyler's Beck of Tech & Espresso's tutorial</a>. Finally, I had finished my sketch in Fusion360 and was ready to print it. I thought that I was done but oh boy, there were a lot of things that I had to reconsider after this first print.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="MacrobotIdea1.png" class="img-responsive img-rounded" alt="Picture of my first idea for the Macrobot in Fusion360.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="MacrobotInside.png" class="img-responsive img-rounded" alt="Picture of the inside of the Macrobot in Fusion360.">
+      <br><img src="MacrobotIdea2.png" class="img-responsive img-rounded" alt="Picture of the final look of the Macrobot in Fusion360.">
+    </div>
+    <div class="col-md-5">
+      <br><br><p style="text-align: left;">After my first print, I quickly spotted some errors that I would have to change. The first one was that the joining mechanism did not work since when I tried to join both pieces, the empty cylinders broke into four different pieces. The second one was that I clearly hadn't thought about all the parts that I was going to use. After figuring out that I would need two motors to move the whole Macrobot and I was going to use the ESP32-CAM, I looked at the 3D printed parts and thought that there were no holes in order for those parts to fit. I quickly thought of cutting them with scissors but after trying to cut for several minutes, I learned that cutting 3D printed parts is not the smartest idea. Thankfully, the "ears" and hollow sphere turned out great! Solving the second error was pretty easy, I just made some rectangles with the motor and camera dimensions and just extruded them to cut the sphere in certain parts. However, the joint mechanism was not easy to solve. After looking endlessly through the Internet, I stumbled upon this tutorial from <a href="https://www.youtube.com/watch?v=SvI8qrdAr1w&t=190s">DreamOnward</a> explaining how to make annular joints in Fusion360. I decided to go with this idea. After modeling all of this, I had my second sketch ready to 3D print. However, after analyzing my first 3D print, I realized that it would take about 2 and a half days so I just decided to print the sphere since the "ears" where completely fine. After 3D printing, I needed to makes the motor holes a little bigger and the joining mechanism did not work again due to it being very small so I changed these small mistakes and 3D printed again only the sphere. Also, I talked to Dr. Melenbrink about 3D printing techniques since the bottom of the sphere looked like it was peeled. Changing the orientation in Prusa Slicer and 3D printing again fixed all errors, but there was still some improvement that could be made in the joining mechanism.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p style="text-align: left;">Both Fusion360 files can be seen below in a virtual room where you will be able to move them around and expand them to see each component. There will also be links to download the files at the end. Next, let's look at the circuit for the Macrobot.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <iframe src="https://hotmail256895.autodesk360.com/shares/public/SH56a43QTfd62c1cd968027f70027176b67c?mode=embed" width="600" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+    </div>
+    <div class="col-md-5">
+      <iframe src="https://hotmail256895.autodesk360.com/shares/public/SH56a43QTfd62c1cd96836b41c4ff35935a8?mode=embed" width="600" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+</div>
+
+<br><div class="container-fluid2 bg-7 text-center">
+  <p><h4 style="color: black;">Circuit Design:</h4></p>
+</div>
+
+<div class="container-fluid2 bg-8">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p style="text-align: left;">There are two ways that you can use the circuit that I created for the moving Macrobot which is by using a power supply that can fit inside the hollow sphere or connecting it to your computer. The circuit doesn't change as much except the way that the ESP32-CAM is getting it's power and the amount of pin-socket wires that you will use. Since the ESP32-CAM has the ability to connect to WiFi, there was no need of the ESP32 Huzzah. The major problem was fitting the circuit inside the sphere so I had to make it as compact as I could. </p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <p style="text-align: left;">First, we will go over the circuit that uses a Lipo 1000 mAh battery as the power source. Since we are using the L9110 H-bridge driver, it can move two motors without needing another driver. Both N20 Gearmotors have two wires, in my case, one was red and the other one was black. Using the screwdriver, I would secure both wires into each of it's corresponding slots. I would repeat this step for the second motor. Now that both motors are connected, we need to connect the driver to the ESP32-CAM. The driver has six different pins which are A-1A, A-1B, B-1A, B-1B, VCC, and GND. In order to know where to connect each pin, I used the <a href="https://randomnerdtutorials.com/esp32-cam-ai-thinker-pinout/">Random Nerd Tutorial ESP32-CAM Pinout</a> which helped me identify what each pin meant. After learning this, connecting the wires was quite simple. VCC connected to 5V and GND connected to GND in the ESP32-CAM. For the other four pins, you can choose any pin in the ESP32-CAM that is not power or ground. In my case, I chose pin 13, 15, 14, and 2. Now that we have connected the driver to the ESP32-CAM, we are just missing to connect the Lipo battery. Since the Lipo has a JST connector, I was able to connect two wires that were then connected to two pin-socket wires, one for the red wire, and the other one for the black one. In order to connect them to the ESP32-CAM, I connected the red wire to the 3V3 pin and the black wire to any of the GND pins. That was it, the most compact circuit that I could make!</p>
+    </div>
+    <div class="col-md-5">
+      <img src="CircuitWithLipo.jpg" class="img-responsive img-rounded" alt="Picture of the Macrobot circuit with a Lipo battery made in real life.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="CircuitWithProgrammer.jpg" class="img-responsive img-rounded" alt="Picture of the Macrobot circuit with the FTDI programmer made in real life.">
+    </div>
+    <div class="col-md-5">
+      <p style="text-align: left;">For the circuit that connects the ESP32-CAM to your computer which allows you to upload code and access the Serial Monitor, you need the FTDI programmer. You might notice that the programmer has four different pins labeled VCC, TXD, RXD, and GND. Since I had no idea how to connect them, I follow <a href="https://randomnerdtutorials.com/program-upload-code-esp32-cam/#more-93548">Random Nerd's Tutorial</a> on how to upload code to the ESP32-CAM. After looking at the wiring diagram that they used, I connected the VCC pin to 3V3, GND to GND, TXD to U0R, and RXD to U0T. However, after looking at the tutorial, I noticed that you also had to add an extra wire that connects the GND and the IO0 pin on the ESP32-CAM in order to upload code. The rest of the wiring is completely the same except that you can get rid of the Lipo battery and the pins that it is connected to. However, if you want to upload new code to the camera, and the circuit is already inside the sphere, you need to be very cautious in not detaching any of the other circuit components while at the same time trying to position the programmer wires correctly.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <br><p style="text-align: left;">Now that the circuit is complete, I just have to put it inside of the sphere. In order to achieve this, I had to use masking tape as well as double sided tape in order to secure all the electronics. I also used cable ties in order to decrease the space that the wires took inside of the sphere. The hardest part was securing the ESP32-CAM since half of it was on one side and the other half on the other one so I just completely secured it on one side as well as using masking tape in order to force the pins to remain connected. Also, I had to secure the Lipo battery to one side of the sphere so that it wouldn't move around and start to bump into other parts of the circuit. With all the taping and positioning of the circuit, I tried to see how it would look when the sphere was closed and the camera moved just a tiny bit to the other side but it was still visible from the outside. After this was done, I just had to write the code which was the hardest part and try it for the first time!</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <img src="MacrobotCircuit.jpg" class="img-responsive img-rounded" alt="Picture of the Macrobot circuit inside the sphere.">
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid2 bg-7 text-center">
+  <p><h4 style="color: black;">Programming in Arduino IDE:</h4></p>
+</div>
+
+<div class="container-fluid2 bg-8">
+  <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-10">
+        <p style="text-align: left;">One of the last steps in order to make a functioning Macrobot was making the code in Arduino IDE. However, I first had to decide how I would tell the moving robot to stop and go towards it's companion. I looked at <a href="https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/#more-82418">Random Nerd's Tutorial</a> about face recognition and video streaming with the ESP32-Cam and decided to make the moving robot recognize the statinary one through face recognition. I tried this method, but there was one huge problem. When I clicked face recognition, the camera would freeze and reconnect to WiFi. Looking at the Internet, I couldn't find  a concrete solution so instead I decided to look for another way to do it. Dr. Melenbrink suggested to use the <a href="https://randomnerdtutorials.com/esp32-cam-opencv-js-color-detection-tracking/#more-100642">color detection and tracking</a> tutorial so that it would find the other robot through color sensing. However, when I tried this code and added the Firebase part which would be a way to connect the robot between my html page and the robot, I ran into the same problem. The camera froze and it restarted. So then, I remembered that Dr. Melenbrink had previously mentioned aruco markers which are used in robotics and figured that I could use a QR code that the camera would detect and know that it had to go forward. However, after searching through the Internet for some code that could do that, I only found YouTube videos were they would only show you the final product, but no code such as <a  href="https://www.youtube.com/watch?v=r4M62CiilE8&t=349s">this one</a>. After searching for a little longer, I found <a href="https://hackaday.io/project/176421-think-a-tron-2020/log/187317-and-the-answer-is">Michael's</a> documentation about reading small QR codes and there was a link that took you to <a href="https://www.filipeflop.com/blog/utilize-esp32-cam-como-leitor-de-qr-code/">this website</a> that sadly was in portuguese but had the code that I was looking for. However, using Google Translate, I was able to figure out what the author was saying and with some slight adjustments, I ended up with this code that we will go over:</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-10">
+        <iframe src=https://create.arduino.cc/editor/sergiopad/48c242cb-6c7f-45c2-a305-fb6d5481461a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+      </div>
+      <div class="col-md-1">
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <br><p style="text-align: left;">As you might notice, there are some lines in grey meaning that they are comments which allow the reader to understand what each line does. This is called pseudo code. Let's start with the first part of the code. At the start, we include all the libraries that we will use which are the WiFi, Firebase, ESP32-CAM, and ESP32-CAM Qr Code Reader. Then, we define two objects that will serve to capture and decode the image taken by the camera. The following part is just defining the pins of the ESP32-CAM which in my case is the AI-Thinker model. Then, we need to input out WiFi name and password as well as our Google Firebase link and the secure code that is generated. The actual code that I used has these fields filled. Finally, before entering the <code class="language-arduino">setup()</code> function, I just needed to create several variables. A1A, A1B, B1A, and B1B correspond to the pins that the L9110 is connected to the ESP32-CAM. There is an empty string created since this is were we will be storing the commands that are given to the Macrobot. Finally, we define the Firebase ESP32 object.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="MacrobotCode1.png" class="img-responsive img-rounded" alt="Picture of the first part of the Macrobot code.">
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+      <img src="MacrobotCode2.png" class="img-responsive img-rounded" alt="Picture of the setup function of the Macrobot code.">
+    </div>
+    <div class="col-md-5">
+      <br><p style="text-align: left;">Inside the <code class="language-arduino">setup()</code> function, we begin by defining the motors as outputs and for debugging purposes, I included the built-in LED pin to the list in order to know when the Macrobot had connected to my WiFi. After defininf these pins, I set the motors to LOW which means that they are off and the LED is set to HIGH meaning that it's also off. Then, the ESP32-CAM starts to connect to your WiFi and defines all the pins that the ESP32-CAM has. Then, it starts to check if the camera has connected to your WiFi and if not, it starts to print dots in the Serial Monitor and when it finally connects, it prints "Connected to WiFi" which turns the LED on. It then goes on to connect to you Google Firebase and assigns your String variable to the COMMAND variable in the Firebase. Finally, it starts the camera and reports an error if it doesn't start correctly and then starts the decoding object for the images. Now, we only have to look at the <code class="language-arduino">loop()</code> function.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <br><div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-10">
+        <p style="text-align: left;">Inside the <code class="language-arduino">loop()</code> function, we start by getting the COMMAND given to the Macrobot by Firebase and convert it into a String that is stored in our Command variable. Then, the ESP32-CAM captures and image and converts it into a certain format that is needed in order to see if the image has a QR code. After changing the format, it decodes the image for a QR Code and if this is true, it changes the COMMAND in firebase to "Joining" and checks if out Command variable equals this. If it does, it prints the link of the QR Code and move both wheels forward. This means that the Macrobot has found it's partner. However, if there is no QR Code, the COMMAND in Firebase is "Join" which will make the Macrobot spin in circles until it finds one. For this to happen, it only moves either the left or right motor which causes the Macrobot to rotate for 1 and a half seconds. Then, since you will also have the option to separate both Macrobots, it will check if the COMMAND in Firebase is "Separate" and would make both wheels turn bakwards, then it will turn one wheel forward, causing rotation and then both wheels will move forward. In order to create a different rotation angle, we create a random number between 2000 to 5000 which will tell the motors when to stop. After this is executed the COMMAND in Firebase is set to "Stop" and what this does is that it turns off both motors. However, if there is no command given to the Macrobot, both motors will remain off. Finally, the ESP32-CAM gets rid of the image taken in order to allow a new one to be captured. Now we only have to look at the html website created.</p>
+      </div>
+      <div class="col-md-1">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6">
+        <img src="MacrobotCode3.png" class="img-responsive img-rounded" alt="Picture of the loop function of the Macrobot code.">
+      </div>
+      <div class="col-md-3">
+      </div>
+  </div>
+</div>
+
+<br><div class="container-fluid2 bg-7 text-center">
+  <p><h4 style="color: black;">Creating the HTML Page:</h4></p>
+</div>
+
+<div class="container-fluid2 bg-8">
+  <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <p style="text-align: left;">My HTML page basically has two buttons, one to join which is the one in blue and one to separate which is the one in red. Below both buttons, there is a little text box where it will print the QR code link once it has found one. This page is connected to my Google Firebase which serves a connection between Arduino IDE and my HTML page. Throughout the creation of this page, I used the help of <a href="https://www.w3schools.com/">W3Schools</a>. The finished product can be seen <a href="../FinalProject/Macrobot.html">here.</a> Below is the code that creates this website and we will go over it very quickly.</p>
+        </div>
+        <div class="col-md-1">
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10" style="text-align: left;">
+          <pre><code class="language-html">&lt!doctype html&gt
+          &lthtml class="no-js" lang="en"&gt
+          &lthead&gt
+            &ltstyle&gth1 {text-align: center;}&lt/style&gt
+            &ltmeta charset="utf-8" /&gt
+            &ltmeta name="viewport" content="width=device-width, initial-scale=1.0" /&gt
+            &lttitle>Macrobots&lt/title&gt
+          &lt/head&gt
+          &ltbody>
+            &lth1&gtChoose to join or separate macrobots&lt/h1&gt
+            &ltbr&gt&ltdiv style="text-align:center;"&gt
+              &ltbutton style="width: 125px; font-size: 16px; background-color: #008CBA; border: 2px solid #008CBA;" onclick="joinMacrobots()"&gtJoin&lt/button&gt
+              &ltbutton style="width: 125px; font-size: 16px; background-color: #f44336; border: 2px solid #f44336" onclick="separateMacrobots()"&gtSeparate&lt/button&gt
+            &lt/div&gt
+            &ltbr&gt&lth3 id = "QRcode" style="text-align: center;">QR Code:&lt/h3&gt
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            &ltscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></scriptgt
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                 https://firebase.google.com/docs/web/setup#available-libraries -->
+            &ltscript src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js">&lt/scriptgt
+            &ltscriptgt
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "",
+              authDomain: "",
+              databaseURL: "",
+              projectId: "",
+              storageBucket: "",
+              messagingSenderId: "",
+              appId: "",
+              measurementId: ""
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            var ref = firebase.database().ref("/");
+            var QRcode = firebase.database().ref("/");
+            // make the buttons call the function below 
+            function joinMacrobots(){
+              console.log("joining Macrobots");
+              alert("Macrobots will start to join");
+              ref.update({
+                "COMMAND": "Join"
+              });
+            }
+            function separateMacrobots(){
+              console.log("separating Macrobots");
+              alert("Macrobots will start to separate");
+              ref.update({
+                "COMMAND": "Separate"
+              });
+            } 
+            QRcode.on('value', (snapshot) => {
+              const data = snapshot.val();
+              console.log(data);
+              document.getElementById("QRcode").innerHTML = data["QRCode"];
+            });
+              &lt/script>
+          &lt/body> </code></pre>
+        </div>
+        <div class="col-md-1">
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <p style="text-align: left;">Basically, the first part of this code sets up the title of the webpage, and two buttons that depending on when they are clicked, will run certain functions that are written below. Then, since we have to connect this page to Google Firebase, we have to look at the configuration that it gives us and fill in these fields. Then, we initialize the Firebase and define two variables that will help us give or take commands from the Firebase. Finally, we have 3 functions, one for each button which will change the COMMAND variable in Google Firebase and finally the one that will take the QRCode variable from Firebase and print it in the text box that we created at the start of the code. Before creating each button at the start, we define certain styles that it will have such as it's color, if it's aligned or not, it's width and height, font size, and many more. This is how the Firebase looks after creating this code: </p>
+        </div>
+        <div class="col-md-1">
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <img src="HTMLPage.png" class="img-responsive img-rounded" alt="Picture of the HTML page created for the Macrobot.">
+        </div>
+        <div class="col-md-3">
+        </div>
+  </div>
+</div>
+
+<br><div class="container-fluid2 bg-7 text-center">
+  <p><h4 style="color: black;">3D Printing:</h4></p>
+</div>
+
+<div class="container-fluid2 bg-8">
+  <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <p style="text-align: left;">3D printing was one of the most challenging parts for this assignment because I don't know why but my printer had some issues. Despite all of them, I learned how to clean a nozzle, change filaments, play around with bed and nozzle temperature, using Cura Slicer to send to print, and many more. The first Fusion360 file that I sent to print was done at a very good quality but after that, things started to go downhill. When I tried to print the first sketch of my sphere for the second Macrobot, the nozzle wouldn't extrude filament so it was just printing without anything, the filament started to have bubbles, and the print wasn't sticking to the bed. After looking at several places for help, I found out how to clean the nozzle as well as levelling the bed correctly. When I started to clean the nozzle, it was very clogged so I had to change it and it only lasted for one print the second nozzle. Bed adhesion was not a problem anymore but the filament would sometimes come out and sometimes wouldn't. I changed filament and it seemed to help but I had to change the nozzle again. Finally, the last sketch of my sphere printed but I needed the ears. I decided to print the whole thing but that was a mistake. It was halfway done with the ears when suddenly no filament was coming out and it started to print in the air. I decided to just print the ears instead of the whole part which in the end worked. In order to join the ears with the sphere that I had previously 3D printed, I used super glue which worked amazingly. Throughout the 3D printing process, I developed patience and precision was required to level the bed. I still have to learn a lot about these printers but I am sure that in the future I will master them. Below are picture of the 3D printed parts and attempts:</p>
+        </div>
+        <div class="col-md-1">
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-5">
+          <img src="3DPrint1.jpg" class="img-responsive img-rounded" alt="Picture of the 3D printed components needed for this project.">
+        </div>
+        <div class="col-md-5">
+          <img src="3DPrint2.jpg" class="img-responsive img-rounded" alt="Picture of the 3D printed components needed for this project.">
+        </div>
+        <div class="col-md-1">
+        </div>
+  </div>
+</div>
+
+<br><div class="container-fluid2 bg-7 text-center">
+  <p><h4 style="color: black;">Finished Product:</h4></p>
+</div>
+
+<div class="container-fluid2 bg-8">
+  <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+          <p style="text-align: center;">After testing it for several times, I figured out that the Macrobot's weren't balanced so I added a third wheel on the back on both of them that would still allow them to move but not fall. For this, I had to look around my house for some black LEGO pieces that I would later on tape to the bottom of each of the Macrobot's. For the stationary Macrobot, I printed a QR Code that goes to my website and pasted it to cardboard in order to make it steady. Finally, I used electrical tape to make the Macrobot's look black and paste the QR Code on the stationary one. I really enjoyed working on this project since it is something that I am passionate about and was very happy at seeing it work. Below are pictures of the finished product and one of the tests:</p>
+        </div>
+        <div class="col-md-1">
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-5">
+          <img src="QRMacrobot.jpg" class="img-responsive img-rounded" alt="Picture of the QR Macrobot finished.">
+        </div>
+        <div class="col-md-5">
+          <img src="MoveMacrobot.jpg" class="img-responsive img-rounded" alt="Picture of the Move Macrobot finished.">
+        </div>
+        <div class="col-md-1">
+        </div>
+  </div>
+
+  <br><div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <img src="FinalMacrobots.JPG" class="img-responsive img-rounded" alt="Picture of the Macrobots finished.">
+        </div>
+        <div class="col-md-3">
+        </div>
+  </div>
+
+  <br><div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/aO3-3eSlFl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+
+<br><div class="container-fluid2 bg-7 text-center">
+  <p><h4 style="color: black;">Initial Ideas:</h4></p>
+</div>
+
+<div class="container-fluid2 bg-8">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
       <br><p> This first idea would solve a problem that I encounter in my daily life whihc is getting wet when it rains. This idea is called the "Rain/Umbrella Vehicle." It would basically consist of a set of four wheels that would be connected a chassis. This vehicle would then have an umbrella sticked to the top of it and two sensors. The first sensor would tell the vehicle that it is raining. This could be changed by a computer that would directly tell the vehicle that it is raining. After the vehicle knows that there is rain in the environment, it would open the umbrella and using the second sensor, it would find a person that is standing in the rain or doesn't want to get wet and follow them wtih the umbrella. This would solve the getting wet in the rain problem and you wouldn't have to worry to carry an umbrella wherever you go. </p>
     </div>
     <div class="col-md-5">
@@ -57,6 +506,7 @@
     <div class="col-md-1">
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-1">
     </div>
