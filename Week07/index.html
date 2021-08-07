@@ -145,7 +145,7 @@
     <div class="col-md-1">
     </div>
     <div class="col-md-10">
-      <p>For the second part of this assignment, I decided to create a water level sensor. It basically would tell you how much water is in your cup. For this, I used four pieces of copper. One was always connected to the ground and the other three acted as capacitive sensing. First, I had to cut the three four pieces of copper using scissors and using tape, I taped the wires to the copper. After this was done, I moved on to creating the circuit in real life. I used Robert's example as my base but I did some modifications. The first one was that since I had three copper pieces that would serve to measure the water level, I had to create three capacitive sensing. Also, I included a copper piece that would go to ground, which would allow me to not touch the other three copper pieces in order to get a measurement. After these modification were made, it was time to code this circuit.</p>
+      <p>For the second part of this assignment, I decided to create a water level sensor. It basically would tell you how much water is in your cup. For this, I used four pieces of copper which had to be smaller than the ones in the kit because they would overlap which shouldn't happen. One of them was always connected to the ground and the other three acted as capacitive sensors so the cup would be split into three parts. In the Serial Monitor, depending on how much water there was, it would tell you if it was empty, half-empty, or full. The three copper pieces were taped to the outside of the cup and the fourth one you would have to move with your hand. Throughout the process, I learned to create capacitive sensors, program them in Arduino, finding the threshold for each piece, and wiring each sensor correctly. I ran into some problems, but with the help of Victoria after attending a lab session, I was able to get the cup working correctly. In the end, the cup works and I am really happy with the end result.</p>
     </div>
     <div class="col-md-1">
     </div>
@@ -167,8 +167,11 @@
   <div class="row">
     <div class="col-md-1">
     </div>
-    <div class="col-md-10">
-      <p>In Arduino IDE, the code was very simple. I again used Robert's capacitive sensing code as my base but I made a few modifications. I added two more sensor values, two more capacitive sensors, and made a set of conditions in order to print certain things to the serial monitor. The code was quite easy and fast so I hooked up the Metro M0 to the computer and uploaded the code. I started to test it and had to play around with the sensor values so that it would be accurate to the water being poured. The serial monitor basically printed the amount of water in the cup which would either be very little, at 50% or full of water. I had a lot of trouble making the copper pieces sense the water between them because the numbers would start to change very quickly. However, in the end, everything turned out okay and I learned to create my own water sensor!</p>
+    <div class="col-md-5">
+      <br><p>First, I had to create the circuit for the cup to work. I started off by cutting four different copper pieces and for that I used the extra copper that came in the kit. After that was done, I used hooked up some wires to them so that they would be able to tell me when the other copper piece on the other side had been detected. For this, I used more tape until I had finally taped the three copper pieces to the side of the cup. Next, I used one pin-socket wire to connect the fourth copper piece to the Metro M0 Express. After that, I only had to connect the three taped copper pieces. For that, I used <a href="https://roberthart56.github.io/SCFAB/SC_lab/Sensors/CapacitiveTouch/index.html">Robert's</a> example of how to wire one copper piece, but I made some slight adjustments. First, I changed the pins that he used, and then I copied that same design two more times for the two other copper pieces. For the fourth copper piece, I just hooked it up to ground. Now that the circuit was created, I just had to make the Arduino code for it and test it! </p>
+    </div>
+    <div class="col-md-5">
+      <img src="CupCircuit.jpg" class="img-responsive img-rounded" alt="Picture of the cup circuit made in real life.">
     </div>
     <div class="col-md-1">
     </div>
@@ -178,14 +181,48 @@
     <div class="col-md-1">
     </div>
     <div class="col-md-5">
+      <iframe src=https://create.arduino.cc/editor/sergiopad/f4c08053-4ad4-455d-b8a1-d7466f26b174/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+    </div>
+    <div class="col-md-5">
+      <p>The first step to make the code was to create a new Arduino IDE file. After that was done, I looked at <a href="https://roberthart56.github.io/SCFAB/SC_lab/Sensors/CapacitiveTouch/CapacitiveTouch.txt">Robert's</a> example code for just one copper piece and used it as my base. The first thing that I made was create two more capacitive sensor variables, each with their respective digital pins. Then, I also added two more sensor values for the two extra copper pieces that I had taped to the cup. Since the fourth copper piece was attached to ground, I didn't have to specify any pins for that one. After that, I added some debugging methods. What would basically happen would be that as the code ran, it would tell you the number that the sensor was reading for each water level so I had to print 3 different numbers to the Serial Monitor. Then, in order for the user to know how much water was in the cup, I created 3 different <code class="language-arduino">if()</code> statements where it would check if the number for each water level was a certain number so that it then would print you the amount of water in your cup. This was very hard since after doing many tries, the Serial Monitor would print very different numbers, but in the end, I could find the range of each water level. Something very weird was that for the copper piece that was at the top of the cup, the highest it would go woul be about 500 while the others would go to about 9500. Now that the code was done, I only had to test it so I hooked up the Metro to my computer and uploaded the code.</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+      <p>After many trials, I finally could figure out the appropriate threshold for each of the water levels, and after that, the cup was working! However, in some trials, the wires connecting the three copper pieces would disconnect so I would need to add more tape to each of the sensors. I also had to make the fourth copper piece smaller because it would sometimes be touching two of the copper pieces on the other side so in the Serial Monitor, no level description would be printed. However, after overcoming these details, everything was fine. Depending on how much water I poured in, it would tell me if it was empty, half-full or completely full. Below are two videos, one of the Serial Monitor printing the values for each water level and the capacity of the cup and the other one of myself pouring water into the cup and moving the copper piece attached to the ground pin. In the end, I was pretty happy with the measuring cup that I made. Now, I had a way to now the water level of the cup without having to look inside of it!</p>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
       <iframe width="560" height = "315" src="https://www.youtube.com/embed/5mkED6JeqPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="col-md-5">
-      <iframe src=https://create.arduino.cc/editor/sergiopad/f4c08053-4ad4-455d-b8a1-d7466f26b174/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+      <iframe width="560" height = "315" src="https://www.youtube.com/embed/4GJbz085FJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="col-md-1">
     </div>
   </div><br>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <img src="FinishedWaterCup.jpg" class="img-responsive img-rounded" alt="Picture of the water measuring cup finished in real life.">
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div><br>
+
 
 
     
